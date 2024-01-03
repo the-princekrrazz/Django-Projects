@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    section{
+        margin-top: 100px;
+        margin: auto;
+        font-size: 25px;
+    }
+</style>
+<body>
+   <section>
+    <form method="POST">
+        {% csrf_token %}
+         {{Form}}
+        <p>Output </p>
+        <input type="text" value="{{value}}">
+        <button type="submit">Send</button>
+    </form>
+   </section>
+</body>
+</html>
