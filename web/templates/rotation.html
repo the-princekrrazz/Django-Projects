@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+
+    }
+    body{
+        justify-content: center;
+        align-items: center;
+        background: #162052;
+        flex-direction: column-reverse;
+
+    }
+    .Rbox{
+        
+        margin-left: 12%;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background: rgba(0,0,0,0.5);
+        border-radius: 50%;
+        overflow: hidden;
+
+    }
+    .Rbox::before{
+        position: absolute;
+        content: '';
+        inset: -10px 40px;
+        background: linear-gradient(15deg, #00ccff,#d400d4);
+        transition: 0.5s;
+        animation: anim 4s linear infinite;
+    }
+    @keyframes anim {
+        0%
+        {
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    .Rbox:hover::before{
+        inset: -20px 0px;
+
+    }
+    .Rbox::after{
+        content: '';
+        position: absolute;
+        inset: 6px;
+        background: #162052;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    .Rcontent{
+        position: absolute;
+        inset: 12px;
+        z-index: 3;
+        border-radius: 50%;
+        border: 6px solid #070a1c;
+        overflow: hidden;
+
+    }
+    .Rcontent img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10%;
+        height: 10%;
+        object-fit: cover;
+        transition: 0.5s;
+        pointer-events: none;
+    }
+    .Rbox:hover .Rcontent img{
+        opacity: 0;
+        
+    }
+    .div1{
+        margin: 200px 100px 300px 550px;
+        
+    }
+h1{
+    margin-top: 10px;
+}
+@media (max-width: 1200px){
+    .div1{
+        margin: 200px 100px 300px 550px;
+        
+    }
+}
+@media (max-width: 991px){
+    .div1{
+        margin: 200px 100px 300px 550px;
+        
+    }
+
+}
+@media (max-width: 617px) {
+   
+
+}
+@media(max-width: 450px){
+
+
+}
+@media(max-width: 365px){
+
+}
+</style>
+<body>
+   <div class="div1">
+    <div class="Rbox">
+        <div class="Rcontent">
+            <img src="pic2.jpeg" alt="">
+        </div>
+       </div> 
+       <h1>Thank you for your reaponse...</h1>
+   </div>
+</body>
+</html>
